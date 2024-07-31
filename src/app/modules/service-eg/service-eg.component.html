@@ -1,0 +1,70 @@
+<app-one></app-one>
+<div class="container">
+    <p>service-eg works!</p>
+
+    <p><strong>This data Comes From one Component:</strong>
+        {{data}}
+    </p>
+    <div>
+        <input  [(ngModel)] = "text1" type="text" >
+        <button class="btn btn-primary" (click)="getData()">Post Data</button>
+        <div>
+            <table *ngIf="show">
+                <tr>
+                  <th>Key</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>Design</td>
+                  <td>
+                    {{seoData.design}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Structure</td>
+                  <td>
+                    {{seoData.structure}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Href</td>
+                  <td>
+                    {{seoData.href}}
+                  </td>
+                </tr>
+                <tr >
+                  <td>
+                    Meta Information
+                  </td>
+                  <td >
+                    <p *ngFor="let data of seoData.metaInfo | keyvalue">
+                        {{data.key}} : {{data.value}}
+                    </p>
+                  </td>
+                </tr>
+               <tr>
+                <td>
+                    Internal Links
+                </td>
+                <td >
+                    <p *ngFor="let data of seoData.internalLinks ">
+                        {{data}}
+                    </p>
+                </td>
+               </tr>
+               <tr>
+                <td>
+                    External Links
+                </td>
+                <td >
+                    <p *ngFor="let data of seoData.externalLinks ">
+                        {{data}}
+                    </p>
+                </td>
+               </tr>
+
+              </table>
+        </div>
+    </div>
+</div>
+

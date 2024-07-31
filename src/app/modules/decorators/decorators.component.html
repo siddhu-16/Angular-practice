@@ -1,0 +1,41 @@
+<div class="container" >
+    <ol>
+        <li>Class decorators</li>
+        <li>Property decorators</li>
+        <li>Method decorators</li>
+        <li>Parameter decorators</li>
+    </ol>
+
+    <p>Property Decorators: </p>
+    <app-child [item] = "text1" (data) = "updateData($event)"></app-child>
+    <p>Otuput Decorator: {{text2}} </p>
+    <p>Method decorators : @HostListener</p>
+    <p>Parameter decorators : @Inject</p>
+
+    <P>Pipes:</P>
+    <ol>
+        <p>String Pipes:</p>
+        <li>{{text2 | uppercase}}</li>
+        <li>{{text2 | lowercase}}</li>
+        <li>{{text2 | titlecase}}</li>
+        <li>{{text2 | json}}</li>
+        <li>{{text2 | slice:1:3}}</li>
+        
+    </ol>
+    <ol>
+        <p>Date Pipe</p>
+        <li>{{date | date: 'ddMMyyyy'}}</li>
+        <li>{{date |  date: 'dd/MM/yyyy'}}</li>
+        <li>{{date |  date: 'dd/MM/yyyy'}}</li>
+    </ol>
+    <ol>
+        <p>Currency Pipe</p>
+        <li>{{ a | currency }}</li>
+        <li>{{ a | currency: 'USD' }}</li>
+        <li>{{ a | currency: 'CAD' }}</li>
+        <li>{{ b | currency: 'CAD' : 'symbol' : '4.2-2' }}</li>
+    </ol>
+
+</div>
+
+

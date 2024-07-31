@@ -1,0 +1,28 @@
+<div class="container">
+    <p>Directive types:</p>
+    <ol>
+        <li>Component directives</li>
+        <li>Attribute directives</li>
+        <li>Structural directives</li>
+    </ol>
+    <p appHighlight>Attribute directives: AppHighlight</p>
+    <p [ngClass]="isSpecial ? 'special' : ''">
+        Class Directive: ngClass 
+    </p>
+    <p [ngStyle]="currentStyles">
+        Style Directive
+    </p>
+
+    <p>ng model</p>
+    <input  [(ngModel)] = "text1" type="text" (input)="onChange()">
+    <p>{{text2}}</p>
+
+    <p>Property Binding: Image url</p>
+    <img alt="item" [src]="itemImageUrl" style="width: 100px; height: 100px;">
+    <p> Event Binding : Click Event , Input Event </p>
+    <button class="btn btn-primary" (click)="onClick()">Submit</button>
+    <p>
+      <strong> String Interploation:</strong> {{text3}}
+    </p>
+
+</div>
